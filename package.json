@@ -1,0 +1,48 @@
+{
+  "name": "mi-cuerpo-mis-emociones",
+  "version": "1.0.0",
+  "description": "Aplicación educativa sobre educación sexual inclusiva para niños y personas con discapacidad cognitiva",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win --x64",
+    "build:all": "electron-builder -mwl",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [
+    "educacion",
+    "sexual",
+    "inclusivo",
+    "accesibilidad",
+    "ninos"
+  ],
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.3.3",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.educacion.micuerpo",
+    "productName": "Mi Cuerpo Mis Emociones",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "main.js",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon-_2_.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}

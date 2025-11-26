@@ -1,0 +1,45 @@
+﻿{
+  "app": {
+    "name": "Mi Cuerpo, Mis Emociones",
+    "version": "1.0.0",
+    "language": "es-ES"
+  },
+  "audio": {
+    "defaultVolume": 80,
+    "speechRate": 0.8,
+    "speechPitch": 1.2,
+    "soundEffects": true
+  },
+  "accessibility": {
+    "highContrast": true,
+    "largeText": true,
+    "keyboardNavigation": true,
+    "screenReader": true
+  },
+  "modules": {
+    "module1": {
+      "name": "Semáforo de emociones",
+      "enabled": true,
+      "starsToEarn": 6
+    },
+    "module2": {
+      "name": "Mis emociones",
+      "enabled": true,
+      "starsToEarn": 4
+    },
+    "module3": {
+      "name": "Mi espacio personal",
+      "enabled": true,
+      "starsToEarn": 7
+    },
+    "module4": {
+      "name": "Personas de confianza",
+      "enabled": true,
+      "starsToEarn": 5
+    },
+    "module5": {
+      "name": "Recompensas",
+      "enabled": true
+    }
+  }
+}

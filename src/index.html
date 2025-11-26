@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Cuerpo, Mis Emociones</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Valor de las emociones y el respeto a ser diferentes</h1>
+        </div>
+
+        <div class="content">
+            <!-- Controles de audio -->
+            <div class="audio-controls">
+                <button class="btn-audio" id="soundToggle" title="Sonido">🔊</button>
+                <button class="btn-audio" id="repeatBtn" title="Repetir">🔄</button>
+                <button class="btn-audio" id="volumeBtn" title="Volumen">🔉</button>
+            </div>
+
+            <!-- Barra de progreso -->
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+
+            <!-- Pantalla de inicio -->
+            <div class="screen active" id="home">
+                <div class="instruction-text">¡Bienvenido! Vamos a aprender juntos</div>
+                <button class="btn-large btn-primary" data-module="1">
+                    🎮 Jugar
+                </button>
+                
+                <button class="btn-large btn-warning" id="exitBtn">
+                    👋 Salir
+                </button>
+            </div>
+
+            <!-- Módulo 1: Semáforo de emociones -->
+            <div class="screen" id="module1">
+                <div class="instruction-text" id="trafficMenuTitle">Elige una actividad del semáforo</div>
+                <div class="traffic-menu" id="trafficMenu">
+                    <button class="btn-large btn-primary" id="startPart1">1️⃣ Descubre la emoción</button>
+                    <button class="btn-large btn-success" id="startPart2">2️⃣ Actúa con el semáforo</button>
+                </div>
+
+                <div class="instruction-text" id="part1Title" style="display:none;">Primera parte: Descubre la emoción</div>
+                <div class="trafficlight-container" id="part1Container" style="display:none;">
+                    <div class="trafficlight-visual">
+                        <div class="trafficlight" id="trafficLight">
+                            <button class="light light-green" data-color="verde" aria-label="Verde">🟢</button>
+                            <button class="light light-yellow" data-color="amarillo" aria-label="Amarillo">🟡</button>
+                            <button class="light light-red" data-color="rojo" aria-label="Rojo">🔴</button>
+                        </div>
+                    </div>
+                    <div class="emotion-display" id="emotionDisplay">
+                        <div class="emotion-character" id="emotionCharacter">🙂</div>
+                        <div class="emotion-text" id="emotionText">Toca un color para descubrir la emoción</div>
+                        <div class="emotion-tip" id="emotionTip"></div>
+                    </div>
+                </div>
+
+                <div class="instruction-text" id="part2Title" style="display:none; margin-top: 20px;">Segunda parte: Actúa con el semáforo</div>
+                <div class="traffic-cases" id="trafficCases" style="display:none;">
+                    <div class="case-text" id="caseText"></div>
+                    <div class="case-buttons">
+                        <button class="btn-choice-color btn-green" data-choice="verde">🟢</button>
+                        <button class="btn-choice-color btn-yellow" data-choice="amarillo">🟡</button>
+                        <button class="btn-choice-color btn-red" data-choice="rojo">🔴</button>
+                    </div>
+                </div>
+                <div class="traffic-back" id="trafficBack" style="display:none; margin-top: 10px;">
+                    <button class="btn-large btn-warning" id="backToTrafficMenu">⬅️ Elegir otra actividad</button>
+                </div>
+            </div>
+
+            <!-- Módulo 2: Mis emociones -->
+            <div class="screen" id="module2">
+                <div class="instruction-text">¿Cómo te sientes hoy?</div>
+                <div class="emotions-container" id="emotionsContainer"></div>
+            </div>
+
+            <!-- Módulo 3: Mi espacio personal -->
+            <div class="screen" id="module3">
+                <div class="scenario-card">
+                    <div class="emoji" id="scenarioEmoji"></div>
+                    <p id="scenarioText"></p>
+                    <div class="scenario-buttons">
+                        <button class="btn-choice btn-yes" data-answer="true">✅ Está bien</button>
+                        <button class="btn-choice btn-no" data-answer="false">❌ No me gusta</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Módulo 4: Personas de confianza -->
+            <div class="screen" id="module4">
+                <div class="instruction-text">¿A quién puedes contarle si algo te molesta?</div>
+                <div class="trust-container" id="trustContainer"></div>
+            </div>
+
+            <!-- Módulo 5: Recompensas -->
+            <div class="screen" id="module5">
+                <div class="rewards-container">
+                    <div class="instruction-text">¡Felicitaciones! 🎉</div>
+                    <div class="stars" id="starsEarned"></div>
+                    <div class="certificate">
+                        <h2>🏆 Certificado 🏆</h2>
+                        <p><strong>¡Lo hiciste muy bien!</strong></p>
+                        <p>Has aprendido sobre tu cuerpo, tus emociones y cómo cuidarte</p>
+                        <p style="font-size: 3em; margin-top: 20px;">🎊</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botones de navegación -->
+            <div class="nav-buttons">
+                <button class="btn-nav" id="backBtn">⬅️ Atrás</button>
+                <button class="btn-nav" id="homeBtn">🏠 Inicio</button>
+                <button class="btn-nav" id="nextBtn">Siguiente ➡️</button>
+            </div>
+            <div class="ver-video"> 
+                <button class="btn-large btn-success" id="openVideoBtn">
+                    🎬 Ver video
+                </button>
+            </div>
+            <!-- Feedback visual -->
+            <div class="feedback" id="feedback"></div>
+        </div>
+    </div>
+
+    <!-- Control de volumen -->
+    <div class="volume-slider" id="volumeSlider" style="display: none;">
+        <input type="range" min="0" max="100" value="80" id="volumeControl">
+    </div>
+
+    <script src="js/audio.js"></script>
+    <script src="js/modules.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- Modal de video -->
+    <div class="video-modal" id="videoModal" style="display:none;">
+        <div class="video-backdrop" id="videoBackdrop"></div>
+        <div class="video-container" role="dialog" aria-modal="true" aria-labelledby="videoTitle">
+            <div class="video-header">
+                <h2 id="videoTitle">Video</h2>
+                <button class="video-close" id="closeVideoBtn" aria-label="Cerrar">✖</button>
+            </div>
+            <video id="lessonVideo" class="video-player" controls preload="metadata">
+                <source src="assets/images/video-juego.mp4" type="video/mp4">
+                Tu navegador no soporta video HTML5.
+            </video>
+            <div class="video-actions">
+                <button class="btn-large btn-warning" id="exitVideoBtn">Salir</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

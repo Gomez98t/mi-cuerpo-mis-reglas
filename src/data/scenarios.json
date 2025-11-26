@@ -1,0 +1,53 @@
+﻿{
+  "scenarios": [
+    {
+      "id": 1,
+      "emoji": "🤗",
+      "text": "Un amigo quiere abrazarte",
+      "answer": true,
+      "feedback": "Los abrazos de amigos están bien si tú quieres"
+    },
+    {
+      "id": 2,
+      "emoji": "🤚",
+      "text": "Alguien que no conoces quiere tocarte",
+      "answer": false,
+      "feedback": "Muy bien. Puedes decir no si no te sientes cómodo"
+    },
+    {
+      "id": 3,
+      "emoji": "👨‍⚕️",
+      "text": "El doctor necesita revisarte con tu mamá presente",
+      "answer": true,
+      "feedback": "Correcto. Los doctores cuidan tu salud"
+    },
+    {
+      "id": 4,
+      "emoji": "🙅",
+      "text": "Te sientes incómodo con algo y dices no",
+      "answer": true,
+      "feedback": "Excelente. Siempre puedes decir no"
+    },
+    {
+      "id": 5,
+      "emoji": "😰",
+      "text": "Alguien te dice que guardes un secreto que te hace sentir mal",
+      "answer": false,
+      "feedback": "Muy bien. Los secretos malos debes contarlos"
+    },
+    {
+      "id": 6,
+      "emoji": "👨‍👩‍👧",
+      "text": "Tu familia te da amor y te cuida",
+      "answer": true,
+      "feedback": "Así es. Tu familia te quiere y protege"
+    },
+    {
+      "id": 7,
+      "emoji": "🚫",
+      "text": "Alguien te pide que hagas algo que no te gusta",
+      "answer": false,
+      "feedback": "Correcto. Nadie debe obligarte a hacer algo malo"
+    }
+  ]
+}
