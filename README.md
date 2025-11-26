@@ -62,7 +62,7 @@
 
 ---
 
-## � Instalación
+## Instalación
 
 ### 📋 Requisitos Previos
 
