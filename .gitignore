@@ -16,14 +16,35 @@ Thumbs.db
 desktop.ini
 
 # IDE
+# Dependency directories
+node_modules/
+
+# Build output
+dist/
+dist-build/
+build/
+
+# Archivos compilados de Electron
+Mi Cuerpo Mis Emociones/
+
+# Archivos grandes
+*.zip
+*.exe
+*.blockmap
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
 .vscode/
-.idea/
+.idea/lectron/
 *.swp
 *.swo
 *~
 
 # Logs
-logs/
+logs
 *.log
 npm-debug.log*
 
